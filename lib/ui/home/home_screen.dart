@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:islame_app/core/utils/assets_manager.dart';
 import 'package:islame_app/core/utils/default_screen.dart';
 import 'package:islame_app/ui/home/hadeth/hadeth_tab.dart';
 import 'package:islame_app/ui/home/quraan/quraan_tab.dart';
 import 'package:islame_app/ui/home/radio/radio_tab.dart';
 import 'package:islame_app/ui/home/tasbeh/tasbeh_tab.dart';
 import 'package:islame_app/ui/home/widgets/bottom_nav_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home';
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return DefaultScreen(body:  Scaffold(
       appBar: AppBar(
-        title: Text('Islame'),
+        title: Text(AppLocalizations.of(context)!.appTitle),
       ),
         body: tabs[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -33,10 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             currentIndex: selectedIndex,
             items: [
-              BottomNavBar('Quraan', 'icon_quran.png'),
-              BottomNavBar('Hadeth', 'icon_hadeth.png'),
-              BottomNavBar('Sebha', 'icon_sebha.png'),
-              BottomNavBar('Radio', 'icon_radio.png'),
+              BottomNavBar(AppLocalizations.of(context)!.quranTab, 'icon_quran.png'),
+              BottomNavBar(AppLocalizations.of(context)!.hadethTab, 'icon_hadeth.png'),
+              BottomNavBar(AppLocalizations.of(context)!.tabehTab, 'icon_sebha.png'),
+              BottomNavBar(AppLocalizations.of(context)!.radioTab, 'icon_radio.png'),
             ],
           )),
     );
