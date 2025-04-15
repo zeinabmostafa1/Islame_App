@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islame_app/core/theme/my_theme.dart';
 import 'package:islame_app/core/utils/assets_manager.dart';
 import 'package:islame_app/core/utils/default_screen.dart';
 import 'package:islame_app/ui/home/hadeth/hadeth_tab.dart';
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return DefaultScreen(body:  Scaffold(
       appBar: AppBar(
-        title: Text('Islame'),
+        title: Text('Islame', style: Theme.of(context).textTheme.titleLarge,),
       ),
         body: tabs[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -33,10 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             currentIndex: selectedIndex,
             items: [
-              BottomNavBar('Quraan', 'icon_quran.png'),
-              BottomNavBar('Hadeth', 'icon_hadeth.png'),
-              BottomNavBar('Sebha', 'icon_sebha.png'),
-              BottomNavBar('Radio', 'icon_radio.png'),
+              BottomNavBar('Quraan', 'icon_quran.png', Theme.of(context).colorScheme.primary),
+              BottomNavBar('Hadeth', 'icon_hadeth.png',Theme.of(context).colorScheme.primary),
+              BottomNavBar('Sebha', 'icon_sebha.png',Theme.of(context).colorScheme.primary),
+              BottomNavBar('Radio', 'icon_radio.png',Theme.of(context).colorScheme.primary),
+              // BottomNavBar('Settings',),
             ],
           )),
     );

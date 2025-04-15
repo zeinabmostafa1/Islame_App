@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
         HadethDetails.routeName : (_) => HadethDetails(),
       },
       theme: MyThemeData.lightTheme,
+      darkTheme: MyThemeData.darkTheme,
+      themeMode: ThemeMode.light,
     );
   }
 }
