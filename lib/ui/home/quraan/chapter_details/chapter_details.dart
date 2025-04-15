@@ -43,7 +43,7 @@ class _ChapterDetailsState extends State<ChapterDetails> {
 
   void readFileData(int fileIndex) async {
     String fileContent =
-        await rootBundle.loadString('assets/ files/${fileIndex + 1}.txt');
+        await rootBundle.loadString('assets/quran_files/${fileIndex + 1}.txt');
     List<String> lines = fileContent.trim().split('\n');
     setState(() {
       verses = lines;

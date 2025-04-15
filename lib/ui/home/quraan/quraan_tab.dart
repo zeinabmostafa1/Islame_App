@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islame_app/core/theme/my_theme.dart';
 import 'package:islame_app/core/utils/assets_manager.dart';
 import 'package:islame_app/ui/home/quraan/chapter_title.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class QuraanTab extends StatelessWidget {
   var chapters = [

@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:islame_app/core/theme/my_theme.dart';
 import 'package:islame_app/core/utils/assets_manager.dart';
 import 'package:islame_app/ui/home/hadeth/hadeth_title.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HadethTab extends StatefulWidget {
   HadethTab({super.key});
