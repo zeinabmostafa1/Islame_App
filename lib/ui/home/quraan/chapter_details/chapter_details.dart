@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islame_app/core/utils/default_screen.dart';
+import 'package:islame_app/ui/home/quraan/chapter_details/verse_content.dart';
 
 class ChapterDetails extends StatefulWidget {
   static const routeName = 'quraan';
@@ -30,7 +31,7 @@ class _ChapterDetailsState extends State<ChapterDetails> {
             child: verses.isNotEmpty
                 ? ListView.builder(
                     itemBuilder: (context, index) {
-                      return Text(verses[index]);
+                      return VerseContent(verses[index], index);
                     },
                     itemCount: verses.length,
                   )

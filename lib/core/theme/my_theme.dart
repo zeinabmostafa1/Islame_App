@@ -17,7 +17,7 @@ class MyThemeData {
               color: Colors.black,
               fontWeight: FontWeight.w500,
               fontFamily: 'Messiri'),
-          bodyMedium: TextStyle(
+          labelMedium: TextStyle(
               fontSize: 24,
               color: Colors.black,
               fontWeight: FontWeight.w500,

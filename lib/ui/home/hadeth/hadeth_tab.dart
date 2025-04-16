@@ -72,6 +72,7 @@ List<Hadeth> allHadeth = [];
       String singleHadeth = separatedAhadeth[i];
       List<String> lines = singleHadeth.trim().split('\n');
       String title = lines[0];
+      lines.removeAt(0);
       String content = lines.join('');
       Hadeth h = Hadeth(title, content);
       allHadeth.add(h);

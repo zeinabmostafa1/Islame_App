@@ -4,11 +4,14 @@ import 'package:islame_app/core/utils/default_screen.dart';
 import 'package:islame_app/ui/home/hadeth/hadeth_tab.dart';
 import 'package:islame_app/ui/home/quraan/quraan_tab.dart';
 import 'package:islame_app/ui/home/radio/radio_tab.dart';
+import 'package:islame_app/ui/home/settings/settings_tab.dart';
 import 'package:islame_app/ui/home/tasbeh/tasbeh_tab.dart';
 import 'package:islame_app/ui/home/widgets/bottom_nav_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HomeScreen extends StatefulWidget {
-  static const String routeName = 'home';
+  static const String routeName = 'homeScreen';
    HomeScreen({super.key});
 
   @override
@@ -16,13 +19,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedIndex = 2;
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return DefaultScreen(body:  Scaffold(
       appBar: AppBar(
-        title: Text('Islame'),
+        title: Text(AppLocalizations.of(context)!.appTitle, style: Theme.of(context).textTheme.titleLarge,),
+
       ),
         body: tabs[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -33,15 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             currentIndex: selectedIndex,
             items: [
-              BottomNavBar('Quraan', 'icon_quran.png', Theme.of(context).colorScheme.primary),
-              BottomNavBar('Hadeth', 'icon_hadeth.png',Theme.of(context).colorScheme.primary),
-              BottomNavBar('Sebha', 'icon_sebha.png',Theme.of(context).colorScheme.primary),
-              BottomNavBar('Radio', 'icon_radio.png',Theme.of(context).colorScheme.primary),
-              // BottomNavBar('Settings',),
+              BottomNavBar(AppLocalizations.of(context)!.quranTab, Theme.of(context).colorScheme.primary,iconPath: 'icon_quran.png',),
+              BottomNavBar(AppLocalizations.of(context)!.hadethTab, Theme.of(context).colorScheme.primary,iconPath: 'icon_hadeth.png',),
+              BottomNavBar(AppLocalizations.of(context)!.tabehTab, Theme.of(context).colorScheme.primary,iconPath: 'icon_sebha.png',),
+              BottomNavBar(AppLocalizations.of(context)!.radioTab,Theme.of(context).colorScheme.primary, iconPath: 'icon_radio.png',),
+              BottomNavBar(AppLocalizations.of(context)!.settingsTab, Theme.of(context).colorScheme.primary, mainIcon: Icon(Icons.settings),),
+
             ],
           )),
     );
   }
 
-  var tabs = [QuraanTab(), HadethTab(),  TasbehTab(), RadioTab(),];
+  var tabs = [QuraanTab(), HadethTab(),  TasbehTab(), RadioTab(), SettingsTab()];
 }
