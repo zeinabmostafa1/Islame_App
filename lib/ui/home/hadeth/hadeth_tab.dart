@@ -37,7 +37,7 @@ List<Hadeth> allHadeth = [];
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             AppLocalizations.of(context)!.hadethTitle,
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         Container(

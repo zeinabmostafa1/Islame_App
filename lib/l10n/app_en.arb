@@ -6,5 +6,10 @@
   "hadethTab" : "Hadeth",
   "radioTab" : "Radio",
   "tabehTab" : "Tasbeh",
-  "settingsTab" : "Settings"
+  "settingsTab" : "Settings",
+  "theme" : "Theme",
+  "language" : "Language",
+  "dark" : "dark",
+  "light" : "light",
+  "versesNumber" : "Verses Number"
 }

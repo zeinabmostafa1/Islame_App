@@ -13,15 +13,16 @@ class MyThemeData {
               fontWeight: FontWeight.bold,
               fontFamily: 'Messiri'),
           titleMedium: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               color: Colors.black,
               fontWeight: FontWeight.w500,
               fontFamily: 'Messiri'),
-          labelMedium: TextStyle(
+          bodyMedium: TextStyle(
               fontSize: 24,
               color: Colors.black,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Messiri')),
+             )),
+
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: lightPrimaryColor,
           unselectedItemColor: Colors.white,
@@ -46,6 +47,9 @@ class MyThemeData {
         color: Colors.white,
         surfaceTintColor: null,
       ),
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: Colors.white
+      ),
       colorScheme: ColorScheme.fromSeed(
           seedColor: Color(0xffB7935F),
           primary: Color(0xffB7935F),
@@ -61,7 +65,7 @@ class MyThemeData {
               fontWeight: FontWeight.bold,
               fontFamily: 'Messiri'),
           titleMedium: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               color: Colors.white,
               fontWeight: FontWeight.w500,
               fontFamily: 'Messiri'),
@@ -69,7 +73,7 @@ class MyThemeData {
               fontSize: 24,
               color: Colors.white,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Messiri')
+              )
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: darkPrimaryColor,
@@ -95,6 +99,7 @@ class MyThemeData {
         color: darkPrimaryColor,
         surfaceTintColor: null,
       ),
+      bottomSheetTheme: BottomSheetThemeData(backgroundColor: darkPrimaryColor),
       colorScheme: ColorScheme.fromSeed(
           seedColor: darkPrimaryColor,
           primary: darkPrimaryColor,

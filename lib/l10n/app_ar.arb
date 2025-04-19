@@ -6,5 +6,10 @@
   "hadethTab" : "أحاديث",
   "radioTab" : "الإذاعة",
   "tabehTab" : "تسبيح",
-  "settingsTab" : "الاعدادات"
+  "settingsTab" : "الاعدادات",
+  "theme" : "النمط",
+  "language" : "اللغة",
+  "dark" : "داكن",
+  "light" : "فاتح",
+  "versesNumber" : "عدد الآيات"
 }
